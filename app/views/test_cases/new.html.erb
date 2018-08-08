@@ -1,14 +1,14 @@
-<%= form_for @testsuite do |t| %>
+<%= form_for @testcase, url: test_suit_test_cases_path, method: :POST do |testcase| %>
   <div class="containerSuiteButtons" style="display: block;">
     <%= link_to test_suits_path do %>
       <i class="glyphicon glyphicon-menu-left addSuiteBtnLeft" style="font-size:23px;"></i>
     <% end %>
-    <%= t.submit do %>
+    <%= testcase.submit do %>
       <i class="glyphicon glyphicon-floppy-disk addSuiteBtnRight" style="font-size:23px;"></i>
     <% end %>
   </div>
   <div class="containerForTestSuiteName">
     <div id="labelForSuiteName">Test Suite Name </div>
-    <%= t.text_field :name %>
+    <%= testcase.text_field :name %>
   </div>
 <% end %>

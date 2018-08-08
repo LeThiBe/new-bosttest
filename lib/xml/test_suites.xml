@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite>
+    <id>1</id>
+    <name>testsuit1</name>
+  </testsuite>
+  <testsuite>
+    <id>2</id>
+    <name>testsuite3</name>
+  </testsuite>
+  <testsuite>
+    <id>3</id>
+    <name>ddddd</name>
+  </testsuite>
+  <testsuite>
+    <id>4</id>
+    <name>testsuite2</name>
+  </testsuite>
+  <testsuite>
+    <id>5</id>
+    <name>testsuite2</name>
+  </testsuite>
+  <testsuite>
+    <id>6</id>
+    <name>s</name>
+  </testsuite>
+  <testsuite>
+    <id>7</id>
+    <name>ts5</name>
+  </testsuite>
+</testsuites>
