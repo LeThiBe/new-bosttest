@@ -1,0 +1,68 @@
+.addSuiteBtn, .addSuiteBtnLeft, .addSuiteBtnRight, .addSuiteBtnAdd, .addSuiteBtnShare, .addSuiteBtnNoti {
+  padding: 12px;
+  background-image: url(baseline_create_new_folder_black_36dp.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+}
+.addSuiteBtn {
+  border: 2px solid #f4511e;
+  background-color: #f4511e;
+}
+.addSuiteBtnLeft {
+  border: 2px solid green;
+  background-color: green;
+}
+.addSuiteBtnRight {
+  border: 2px solid blue;
+  background-color: blue;
+}
+table.table_test_suite, {
+  margin-top: 40px;
+  width: 100%;
+}
+
+img.img_folder {
+    padding-right: 30px;
+}
+.row_suite {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.row_suite.text {
+    width: 60%;
+}
+td.row_suite.icon {
+    text-align: center;
+}
+.containerForTestSuiteName {
+  font-size: 14px;
+  color: black !important;
+  width: 90%;
+  margin-top: 40px;
+}
+#labelForSuiteName {
+  padding-right: 20px;
+  float: left;
+}
+.containerForTestSuiteName input{
+  border: 1px solid #424242;
+  border-radius: 3px;
+  width: 250px !important;
+  height: 40px;
+  padding-left: 10px;
+}
+.addSuiteBtnAdd {
+  border: 2px solid #f4511e;
+  background-color: #f4511e;
+}
+
+.addSuiteBtnShare {
+  border: 2px solid #C0CA33;
+  background-color: #C0CA33;
+}
+
+.addSuiteBtnNoti {
+  border: 2px solid #009688;
+  background-color: #009688;
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actions>
+  <!-- Action Enter -->
+  <action>
+	<definition>
+		<id>1</id>
+		<name>AC_ENTER</name>
+	</definition>
+	<language>
+		<vi>
+			<name>nhập</name>
+			<description>bấm phím Enter</description>
+			<arguments>
+				<argument>
+					<name>giao diện</name>
+					<type>Layout</type>
+				</argument>
+				<argument>
+					<name>đối tượng</name>
+					<type>layout entity</type>
+				</argument>
+				<argument>
+					<name>giá trị</name>
+					<type>string</type>
+				</argument>
+			</arguments>
+		</vi>
+		<en>
+			<name>enter</name>
+			<description>press enter key</description>
+			<arguments>
+				<argument>
+					<name>layout</name>
+					<type>Layout</type>
+				</argument>
+				<argument>
+					<name>control</name>
+					<type>layout entity</type>
+				</argument>
+				<argument>
+					<name>value</name>
+					<type>string</type>
+				</argument>
+			</arguments>
+		</en>
+		<jp>
+			<name>エンター</name>
+			<description>「Enter」キーの押下</description>
+			<arguments>
+				<argument>
+					<name>レイアウト</name>
+					<type>Layout</type>
+				</argument>
+				<argument>
+					<name>コントロール</name>
+					<type>layout entity</type>
+				</argument>
+				<argument>
+					<name>値</name>
+					<type>string</type>
+				</argument>
+			</arguments>
+		</jp>
+	</language>
+  </action>
+ </actions><?xml version="1.0" encoding="UTF-8"?>
+<definition>
+  <name>Hello world</name>
+</definition>
+<?xml version="1.0"?>
+<testsuites>
+  <id>3</id>
+</testsuites>
+<?xml version="1.0"?>
+<testsuites>
+  <id>3</id>
+  <name/>
+</testsuites>
+<?xml version="1.0"?>
+<testsuites>
+  <id>3</id>
+  <name>@testsuite.name</name>
+</testsuites>

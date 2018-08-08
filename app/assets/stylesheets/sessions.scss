@@ -1,0 +1,11 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#rainbowForSignup, #rainbowForForgot {
+    width: 360px;
+    height: 1px;
+    background-repeat: repeat-x;
+    background-image: url(color.png);
+    margin-bottom: 20px;
+}

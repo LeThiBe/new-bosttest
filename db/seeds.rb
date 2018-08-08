@@ -1,3 +1,6 @@
+User.create!(name:  "Be", email: "be@gmail.com", age: "3",
+  password: "123456", password_confirmation: "123456", address: "Da Nang")
+
 10.times do
   name = Faker::Name.name
   address = Faker::Lorem.sentence

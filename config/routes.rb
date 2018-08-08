@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :test_suits
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
   resources :users
-  get 'static_page/home'
+  resources :test_suits do
+    resources :test_cases
+  end
+  get 'static_pages/home'
   root "users#index"
 end

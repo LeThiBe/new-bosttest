@@ -1,2 +1,57 @@
-<h1>TestSuits#edit</h1>
-<p>Find me in app/views/test_suits/edit.html.erb</p>
+<%= form_for @ts, url: test_suit_path, method: :PUT do |ts| %>
+  <div class="containerSuiteButtons" style="display: block;">
+    <%= link_to test_suits_path do %>
+      <i class="glyphicon glyphicon-menu-left addSuiteBtnLeft" style="font-size:23px;"></i>
+    <% end %>
+    <%= ts.submit "", class: "Save" %>
+    <%= link_to new_test_suit_test_case_path(@ts,@testsuite) do %>
+      <i class="glyphicon glyphicon-plus addSuiteBtnAdd" style="font-size:23px;"></i>
+    <% end %>
+    <%= link_to "" do %>
+      <i class="glyphicon glyphicon-share addSuiteBtnShare" style="font-size:23px;"></i>
+    <% end %>
+    <%= link_to test_suits_path do %>
+      <i class="glyphicon glyphicon-bell addSuiteBtnNoti" style="font-size:23px;"></i>
+    <% end %>
+  </div>
+  <div class="containerForTestSuiteName">
+    <div id="labelForSuiteName">Test Suite Name </div>
+    <%= ts.text_field :name %>
+  </div>
+<% end %>
+<div class="containerSuiteButtons" style="display: block;">
+ <%= link_to image_tag("add_f"), new_test_suit_path, class: "addSuiteBtn" %>
+</div>
+<table class= "table_test_suite">
+  <thead>
+    <tr>
+      <th class= "row_suite text">Web Test Suites</th>
+      <th class= "row_suite icon">Edit</th>
+      <th class= "row_suite icon">Run</th>
+      <th class= "row_suite icon">Export</th>
+      <th class= "row_suite icon">Duplicate</th>
+      <th class= "row_suite icon">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @testcases.each do |t| %>
+    <tr>
+      <td class= "row_suite text"><%= image_tag("folder1", class: "img_folder")%><%= t["id"] %><%= t["name"] %></td>
+      <td class= "row_suite icon">
+        <%= link_to edit_test_suit_path(t["id"]) do %>
+          <i class="glyphicon glyphicon-edit" style="font-size:20px;"></i>
+        <% end %>
+      </td>
+      <td class= "row_suite icon"><i class="fa fa-play" style="font-size:20px;"></i></td>
+      <td class= "row_suite icon"><i class="fa fa-cloud-download" style="font-size:20px;"></i></td>
+      <td class= "row_suite icon"><i class="fa fa-clone" style="font-size:20px;"></i></td>
+      <td class= "row_suite icon">
+        <%= link_to test_suit_path(t["id"]), method: :delete, data: {confirm: "Are you sure?" }, remote: true do %>
+         <i class="fa fa-trash" style="font-size:20px;"></i>
+        <% end %>
+     </td>
+    </tr>
+  <% end %>
+</tbody>
+
+</table>
