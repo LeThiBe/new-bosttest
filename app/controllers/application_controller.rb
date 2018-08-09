@@ -20,4 +20,15 @@ class ApplicationController < ActionController::Base
   def admin_user
     redirect_to(root_url) unless current_user.admin?
   end
+
+  def load_testsuites
+    xml = Nokogiri::XML(File.open("lib/xml/test_suites.xml"))
+    @testsuits = []
+    xml.xpath("//testsuite").each do |ts|
+      obj = {}
+      obj["id"] = ts.at_xpath("id").text
+      obj["name"] = ts.at_xpath("name").text
+      @testsuits << obj
+    end
+  end
 end

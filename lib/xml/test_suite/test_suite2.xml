@@ -2,7 +2,14 @@
 <testsuite>
   <testcase>
     <id>1</id>
-    <name>testcase</name>
-    <testsuite_id>2</testsuite_id>
+    <name>testcase1</name>
+  </testcase>
+  <testcase>
+    <id>2</id>
+    <name>testcase2</name>
+  </testcase>
+  <testcase>
+    <id>3</id>
+    <name>testcase3</name>
   </testcase>
 </testsuite>

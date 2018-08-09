@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite>
   <testcase>
-    <id>1</id>
-    <name>testcase1</name>
-    <testsuite_id>1</testsuite_id>
-  </testcase>
-  <testcase>
     <id>2</id>
-    <name>testcase2</name>
-    <testsuite_id>1</testsuite_id>
+    <name>tcase2h</name>
   </testcase>
 </testsuite>
