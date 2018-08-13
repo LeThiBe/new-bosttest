@@ -1,9 +1,9 @@
-<%= form_for @testcase, url: test_suit_test_cases_path, method: :POST do |testcase| %>
+<%= form_for @testcase, url: test_suit_test_case_path, method: :PUT do |testcase| %>
   <div class="containerSuiteButtons" style="display: block;">
     <%= link_to test_suits_path do %>
       <i class="glyphicon glyphicon-menu-left addSuiteBtnLeft" style="font-size:23px;"></i>
     <% end %>
-    <%= testcase.submit do %>
+    <%= testcase.submit "" do %>
       <i class="glyphicon glyphicon-floppy-disk addSuiteBtnRight" style="font-size:23px;"></i>
     <% end %>
   </div>

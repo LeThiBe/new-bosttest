@@ -1,18 +1,12 @@
 class TestSuitsController < ApplicationController
   before_action :load_testsuites
   before_action :find_testsuite_edit, only: %i(edit)
+  before_action :load_testcases
+
   def index
   end
 
   def edit
-    doc = Nokogiri::XML(File.open("lib/xml/test_suite/test_suite#{params[:id]}.xml", "a+"))
-    @testcases = []
-    doc.xpath("//testcase").each do |tc|
-      obj = {}
-      obj["id"] = tc.at_xpath("id").text
-      obj["name"] = tc.at_xpath("name").text
-      @testcases << obj
-    end
   end
 
   def update
@@ -59,6 +53,8 @@ class TestSuitsController < ApplicationController
     find_testsuit
     @testsuits.delete(@tam)
     write_xml
+    file = "lib/xml/test_suite/test_suite#{@tam["id"]}.xml"
+    File.delete(file) if File.exist?(file)
     redirect_to test_suits_path
   end
 
@@ -98,18 +94,8 @@ class TestSuitsController < ApplicationController
     end
   end
 
-  def load_testsuites
-    xml = Nokogiri::XML(File.open("lib/xml/test_suites.xml"))
-    @testsuits = []
-    xml.xpath("//testsuite").each do |ts|
-      obj = {}
-      obj["id"] = ts.at_xpath("id").text
-      obj["name"] = ts.at_xpath("name").text
-      @testsuits << obj
-    end
-  end
-
   def load_testcases
+    doc = Nokogiri::XML(File.open("lib/xml/test_suite/test_suite#{params[:id]}.xml", "a+"))
     @testcases = []
     doc.xpath("//testcase").each do |tc|
       obj = {}
