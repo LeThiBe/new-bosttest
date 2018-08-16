@@ -6,26 +6,26 @@
   </testsuite>
   <testsuite>
     <id>2</id>
-    <name>testsuite3</name>
+    <name>a</name>
   </testsuite>
   <testsuite>
     <id>3</id>
-    <name>ddddd</name>
+    <name>b</name>
   </testsuite>
   <testsuite>
     <id>4</id>
-    <name>testsuite2</name>
+    <name>c</name>
   </testsuite>
   <testsuite>
     <id>5</id>
-    <name>testsuite2</name>
+    <name>d</name>
   </testsuite>
   <testsuite>
     <id>6</id>
-    <name>s</name>
+    <name>e</name>
   </testsuite>
   <testsuite>
     <id>7</id>
-    <name>ts5</name>
+    <name>be</name>
   </testsuite>
 </testsuites>

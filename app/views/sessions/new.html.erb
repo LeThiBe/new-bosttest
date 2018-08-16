@@ -1,13 +1,21 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for :session, url: login_path do |f| %>
-      <%= f.label :email %>
-      <%= f.email_field :email, class: "form-control" %>
-      <%= f.label :password %>
-      <%= link_to "I forgot my password","#" %>
-      <%= f.password_field :password, class: "form-control" %>
-      <%= f.submit "Log in", class: "btn btn-primary" %>
-    <% end %>
-    <p>Don't have an Endtest account?<%= link_to "Sign up", "#" %></p>
+<div id="containerFrontPage">
+<%= form_for :session, url: login_path, id: "signUpForm" do |f| %>
+  <div id="signUpTitleContainer">Log In</div>
+  <div id="rainbowForSignup"></div>
+  <div id="containerForUserEmailInput">
+    <%= f.email_field :email, id:"userEmailInput", class:"doRemoveFront registerInput", title:"User Email", placeholder:"Email" %>
   </div>
+  <div id="containerForUserPasswordInput">
+    <%= f.password_field :password, id:"userPasswordInput", class:"doRemoveFront registerInput", title:"User Password", placeholder:"Password" %>
+  </div>
+  <div id="signUpButton">
+   <%= f.submit "Log In", class:'btn btn-success' %>
+   </div>
+   <div id="forgotPass">
+    <%= link_to "I forgot my password","#" %>
+   </div>
+   <div id="rainbowForSignup"></div>
+<% end %>
+<div id="alreadyMember">
+  <div id="alreadyMemberText">Don't have an Endtest account? <%= link_to "Sign Up", new_user_path %></div>
 </div>

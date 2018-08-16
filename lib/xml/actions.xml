@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+  <action>
+    <id>1</id>
+    <name>Click</name>
+  </action>
+  <action>
+    <id>2</id>
+    <name>Write Text</name>
+  </action>
+  <action>
+    <id>2</id>
+    <name>Go to URL</name>
+  </action>
+</actions>
