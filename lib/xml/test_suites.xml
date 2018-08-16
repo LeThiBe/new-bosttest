@@ -12,4 +12,20 @@
     <id>3</id>
     <name>b</name>
   </testsuite>
+  <testsuite>
+    <id>4</id>
+    <name>c</name>
+  </testsuite>
+  <testsuite>
+    <id>5</id>
+    <name>d</name>
+  </testsuite>
+  <testsuite>
+    <id>6</id>
+    <name>e</name>
+  </testsuite>
+  <testsuite>
+    <id>7</id>
+    <name>be</name>
+  </testsuite>
 </testsuites>

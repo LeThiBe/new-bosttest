@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite>
   <testcase>
-    <id>2</id>
-    <name>testcase2</name>
+    <id>1</id>
+    <name>tc2</name>
   </testcase>
   <testcase>
-    <id>3</id>
-    <name>testcase3</name>
+    <id>2</id>
+    <name>tc2</name>
   </testcase>
 </testsuite>

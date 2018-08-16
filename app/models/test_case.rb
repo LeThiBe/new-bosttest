@@ -1,4 +1,4 @@
 class TestCase < ApplicationRecord
-  belongs_to :testsuit
+  belongs_to :test_suit
   belongs_to :user
 end

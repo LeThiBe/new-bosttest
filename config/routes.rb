@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resources :test_cases
   end
   get 'static_pages/home'
-  root "users#index"
+  root "test_suits#index"
 end

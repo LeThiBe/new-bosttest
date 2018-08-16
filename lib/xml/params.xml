@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<params>
+  <param>
+    <idAction>1,2,4,5</idAction>
+    <id>1</id>
+    <name>Id</name>
+  </param>
+  <param>
+    <idAction>1,2,4,5</idAction>
+    <id>2</id>
+    <name>Name</name>
+  </param>
+  <param>
+    <idAction>1,2,4,5</idAction>
+    <id>3</id>
+    <name>Class Name</name>
+  </param>
+  <param>
+    <idAction>1,2,4,5</idAction>
+    <id>4</id>
+    <name>Text Inside</name>
+  </param>
+</params>

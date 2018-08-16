@@ -12,3 +12,92 @@
     <%= testcase.text_field :name %>
   </div>
 <% end %>
+
+<div class= "container">
+  <div class= "testCaseName">
+    <div id= "content">
+      <p>Steps:</p>
+      <ol id="sortable">
+      </ol>
+      <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+        <button class="btn btn-primary" id="addStep">Add Step</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var ol = $("#sortable");
+  var listActions;
+
+  $(document).ready(function(){
+    listActions = gon.actions
+    $('#addStep').click(function() {
+      initItem();
+    });
+  });
+
+  function initItem() {
+    var li = document.createElement('li');
+    li.setAttribute("class","formStyle");
+
+    var rowDiv = document.createElement('div');
+    rowDiv.setAttribute("class", "row step");
+
+    var stepNameDiv = document.createElement('div');
+    stepNameDiv.setAttribute("class", "col-md-2 col-sm-12 col-xs-12 form-group");
+
+    var stepNameLabel = document.createElement('label');
+    var stepNameText = document.createTextNode("Step name:");
+    stepNameLabel.appendChild(stepNameText);
+
+    //create step name textbox
+    var stepNameTextbox = document.createElement('input');
+    stepNameTextbox.setAttribute("type", "text");
+    stepNameTextbox.setAttribute("class","form-control");
+
+    //add to step name div
+    stepNameDiv.appendChild(stepNameLabel);
+    stepNameDiv.appendChild(stepNameTextbox);
+
+    rowDiv.appendChild(stepNameDiv);
+
+
+    var actionDiv = document.createElement('div');
+        actionDiv.setAttribute("class","col-md-2 col-sm-12 col-xs-12 form-group");
+
+    var actionLabel = document.createElement('label');
+    var actionText = document.createTextNode("Action:");
+    actionLabel.appendChild(actionText);
+
+    var actionSelect = document.createElement('select');
+    actionSelect.setAttribute("class", "select2_single form-control");
+
+    var firstOp = document.createElement("option");
+    firstOp.setAttribute("value", "");
+    var firstOpText = document.createTextNode("Choose Action");
+    firstOp.appendChild(firstOpText);
+
+    actionSelect.appendChild(firstOp);
+
+
+
+    listActions.forEach(function(item){
+        var data = item.data;
+        var option = document.createElement("option");
+        option.setAttribute("value", data.id);
+        var actionText = document.createTextNode(data.name);
+        option.appendChild(actionText);
+        actionSelect.appendChild(option);
+    });
+
+    actionDiv.appendChild(actionLabel);
+    actionDiv.appendChild(actionSelect);
+    rowDiv.appendChild(actionDiv);
+    li.appendChild(rowDiv);
+    ol.append(li);
+  }
+
+</script>
+

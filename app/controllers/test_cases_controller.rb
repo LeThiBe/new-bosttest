@@ -4,6 +4,7 @@ class TestCasesController < ApplicationController
   before_action :load_testcases
   before_action :find_testcase, only: %i(destroy)
   before_action :find_testcase_edit, only: %i(edit)
+  before_action :load_actions, only: %i(edit)
 
   def new
     @testcase = TestCase.new
@@ -32,6 +33,7 @@ class TestCasesController < ApplicationController
   end
 
   def edit
+    gon.actions =  @testactions
   end
 
   def update
@@ -100,6 +102,20 @@ class TestCasesController < ApplicationController
       obj["id"] = tc.at_xpath("id").text
       obj["name"] = tc.at_xpath("name").text
       @testcases << obj
+    end
+  end
+
+  def load_actions
+    action = Nokogiri::XML(File.open("lib/xml/actions.xml"))
+    @testactions = []
+    action.xpath("//action").each do |act|
+      testaction = TestAction.new
+      obj ={}
+      testaction.id = act.at_xpath("id").text
+      testaction.name = act.at_xpath("name").text
+      obj["data"] = testaction
+      param = Nokogiri::XML(File.open("lib/xml/params.xml"))
+      @testactions << obj
     end
   end
 end

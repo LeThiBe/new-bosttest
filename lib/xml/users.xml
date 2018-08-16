@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <id>3</id>
+    <name>example1</name>
+    <email>example1@railstutorial.org</email>
+    <passwordDigest>e10adc3949ba59abbe56e057f20f883e</passwordDigest>
+  </user>
+  <user>
+    <id>4</id>
+    <name>examplee</name>
+    <email>examplee@railstutorial.org</email>
+    <passwordDigest>62c8ad0a15d9d1ca38d5dee762a16e01</passwordDigest>
+  </user>
+  <user>
+    <id>5</id>
+    <name>example3</name>
+    <email>example3@railstutorial.org</email>
+    <passwordDigest>b427ebd39c845eb5417b7f7aaf1f9724</passwordDigest>
+  </user>
+  <user>
+    <id>6</id>
+    <name>examplee</name>
+    <email>2@railstutorial.org</email>
+    <passwordDigest>e10adc3949ba59abbe56e057f20f883e</passwordDigest>
+  </user>
+  <user>
+    <id>7</id>
+    <name>lethibe</name>
+    <email>15i1lethibe@gmail.com</email>
+    <passwordDigest>e10adc3949ba59abbe56e057f20f883e</passwordDigest>
+  </user>
+  <user>
+    <id>8</id>
+    <name>bele</name>
+    <email>bele07175@gmail.com</email>
+    <passwordDigest>e10adc3949ba59abbe56e057f20f883e</passwordDigest>
+  </user>
+</users>

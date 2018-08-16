@@ -1,3 +1,22 @@
+#headerColorLine {
+    width: 200%;
+    height: 3px;
+    background-repeat: repeat-x;
+    background-image: url(color.png);
+}
+
+.footerLink {
+    display: inline-block;
+    margin-right: 5px;
+    color: black;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-family: 'Lato' !important;
+}
+
 .footer{
   .main-footer{
     width: 60%;
